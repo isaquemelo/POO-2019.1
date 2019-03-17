@@ -8,8 +8,9 @@ public class Turma {
     private int sala;
     private char horario;
 
-    public void listarAlunos(){
-        System.out.println("Listagem da Turma " + cod + " da sala " + sala + " no horario " + horario);
+    public void info(){
+        System.out.println("Listagem de informações da turma " + cod + " da sala " + sala + " no horario " + horario);
+        System.out.println("Professor " + getProfessor() + "\n");
         for (int i = 0; i < getAlunos().size(); i++){
             System.out.println("Nome: " + getAlunos().get(i).getNome());
             System.out.println("Matricula: " + getAlunos().get(i).getMatricula());
@@ -17,7 +18,7 @@ public class Turma {
             System.out.println("Boletin: " + getAlunos().get(i).getBoletin());
             System.out.println("Nome da Mae: " + getAlunos().get(i).getNome_mae());
 
-            System.out.println("");
+            System.out.println();
         }
     }
 

@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Professor {
     private String grau;
     private long matricula;
@@ -21,5 +23,10 @@ public class Professor {
 
     public void setSalario(double salario) {
         this.salario = salario;
+    }
+
+    @Override
+    public String toString() {
+        return this.nome;
     }
 }
