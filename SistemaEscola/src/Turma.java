@@ -4,9 +4,11 @@ import java.util.Arrays;
 public class Turma {
     private Professor professor;
     private ArrayList<Aluno> alunos = new ArrayList<>();
+    private ArrayList<Material> materials = new ArrayList<>();
     private int cod;
     private int sala;
     private char horario;
+
 
     public void info(){
         System.out.println("Listagem de informações da turma " + cod + " da sala " + sala + " no horario " + horario);
@@ -61,5 +63,16 @@ public class Turma {
 
     public void setHorario(char horario) {
         this.horario = horario;
+    }
+
+    public void addMaterial(String titulo, String conteudo){
+        this.materials.add(new Material(titulo, conteudo));
+    }
+
+    public void listaMateriais(){
+        for ( int i = 0; i < this.materials.size();i++) {
+            System.out.println("Titulo: " + this.materials.get(i).getTitulo());
+            System.out.println("Conteudo: " + this.materials.get(i).getConteudo());
+        }
     }
 }
